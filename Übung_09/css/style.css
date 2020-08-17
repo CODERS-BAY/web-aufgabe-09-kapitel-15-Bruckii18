@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&display=swap');
+
+body {
+    margin: auto;
+    margin-top: 2rem;
+    max-width: 80rem;
+    background-image: url(../img/beach-background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Acme', sans-serif;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.kopf {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+header img{
+    border-radius: 2rem 2rem 0 0;
+    border: 2px solid white;
+    max-height: 20rem;
+    width: 100%;
+}
+header h1 {
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 10rem;
+    transform: translate(-50%);
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-size: 50px;
+}
+.inhalt {
+    grid-column: 1 / 4;
+    grid-row: 2 / 7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.inhalt a {
+    text-decoration: none;
+    color: black;
+}
+.inhalt div:hover {
+    background-color: rgba(95, 95, 95, 0.5);
+}
+.inhalt div {
+    padding: 1rem;
+}
+.inhalt div img {
+    width: 100%;
+    border-radius: 1rem;
+}
+.inhalt p {
+    font-size: 20px;
+}
+.fuss {
+    grid-column: 1 / 4;
+    grid-row: 7 / 8;
+    padding: 3rem;
+    background-color: rgb(95, 95, 95);
+    border-radius: 0 0 1rem 1rem;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Infoseite Flex-container */
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+.flex-item {
+    flex: 1;
+    padding: 1rem;
+    justify-content: center;
+}
+.flex-item div {
+    max-width: 30rem;
+    display: block;
+    margin: auto;
+}
+.flex-item img {
+    max-width: 30rem;
+}
+
+@media screen and (max-width: 550px) {
+    .flex-item div {
+        width: 95%;
+    }
+}

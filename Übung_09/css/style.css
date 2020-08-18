@@ -11,32 +11,48 @@ body {
 }
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 8fr;
 }
 .kopf {
-    grid-column: 1 / 4;
+    grid-column: 1 / 9;
     grid-row: 1 / 2;
-}
-
-header img{
+    background-image: url(../img/traumstrand-haengematte-urlaub-palmen-boot-meer.jpeg);
     border-radius: 2rem 2rem 0 0;
     border: 2px solid white;
     max-height: 20rem;
     width: 100%;
 }
-header h1 {
-    position: absolute;
+.kopf h1 {
     color: white;
-    left: 50%;
-    top: 10rem;
-    transform: translate(-50%);
+    text-align: center;
     font-family: 'Lobster', cursive;
     font-weight: bold;
     font-size: 50px;
 }
+header a {
+    text-decoration: none;
+}
+.navbar {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: rgba(104, 104, 104, 0.5);
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    
+}
+.navbar li {
+    font-size: 30px;
+    transform: rotate(90deg);
+}
 .inhalt {
-    grid-column: 1 / 4;
-    grid-row: 2 / 7;
+    grid-column: 2 / 9;
+    grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: rgba(255, 255, 255, 0.521);
@@ -60,8 +76,8 @@ header h1 {
     font-size: 20px;
 }
 .fuss {
-    grid-column: 1 / 4;
-    grid-row: 7 / 8;
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
     padding: 3rem;
     background-color: rgb(95, 95, 95);
     border-radius: 0 0 1rem 1rem;
@@ -77,9 +93,7 @@ header h1 {
     background-color: rgba(255, 255, 255, 0.521);
 }
 .flex-item {
-    flex: 1;
     padding: 1rem;
-    justify-content: center;
 }
 .flex-item div {
     max-width: 30rem;
@@ -90,8 +104,31 @@ header h1 {
     max-width: 30rem;
 }
 
-@media screen and (max-width: 550px) {
-    .flex-item div {
+
+@media screen and (max-width: 650px) {
+    .flex-item img {
         width: 95%;
+        display: block;
+        margin: auto;
+    }
+    .flex-item p {
+        width: 95%;
+        text-align: center;
+    }
+    .flex-item h2 {
+        text-align: center;
+    }
+    .inhalt {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        max-width: 120rem;
+    }
+    .inhalt {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
